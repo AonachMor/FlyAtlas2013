@@ -1,0 +1,1055 @@
+/* flyAtlas.css 17.07.2023 */
+
+html
+{
+	min-height: 100%; margin-bottom: 1px;
+}
+
+body 
+{
+	height: 100%;
+	font-size: 100%;
+	color: #000000;  
+	margin-top: 0px; margin-bottom: 0px;
+	padding-top: 15px; padding-bottom: 15px;
+	background: linear-gradient(to bottom, #fcfce9, white); 
+}
+
+h1
+{
+	font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
+	font-size: 340%;  
+	color: #fdf6a4; 
+	background-color: transparent;
+	line-height: 1; text-align: left; 
+	margin-top: 25px; margin-bottom: 15px;
+	padding-left: 25px; 
+}
+
+h3 
+{
+	font: 16px Arial, Verdana, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #000000; background-color: #ffffff;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+p
+{
+	font: 115% Verdana, Helvetica, Arial, sans-serif;
+	color: #000000; background-color: #ffffff;
+	text-align: justify; line-height: 150%;
+	margin-bottom: 0px; margin-top: 0px;
+	text-indent: 15px;
+}
+
+p.noindent 
+{
+	text-indent: 0px;
+}
+
+p a
+{
+	color:#186848;
+	text-decoration:none;
+}
+
+/* reproduces default p for use in controls */
+p.standard
+{
+	font-size:100%;
+	text-align: left; 
+	line-height: 150%; 
+	text-indent:0px;
+	margin-bottom: 12px; margin-top: 12px;
+}
+
+a
+{
+	text-decoration:none;
+}
+
+img
+{
+	border: 0px solid white;
+}
+
+/* positions link image on line */
+.linkImg
+{
+	padding-left: 20px;
+	padding-top:15px; 
+}
+
+.firstWord
+{
+	font: 115% Arial, Helvetica, Verdana, sans-serif; 
+	font-weight: bold;
+}
+
+/* (ex #content) Outer-most div; 10px top pad; z-index so above topgradient */
+#wrapper 
+{
+ 	background-color: transparent;
+	max-width: 850px;
+	min-width: 700px;
+	padding-right: 20px; padding-left: 20px;
+	padding-bottom: 20px; padding-top: 0px;
+	margin: 0 auto;		/* for centring */
+}
+
+/* (ex #middle) Green rounded rect. Grey box shadow */
+#container 
+{
+	background-color: #005c37;
+	width: 850px;
+	padding: 10px;
+	overflow: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+/*--- Wrappers to apply rounded box with shadow to main content of page ---*/
+#innerWrapper
+{
+	margin-top: 20px;	
+	background-color: #ffffff;		
+	border: 1px solid #333333;	
+	border-radius: 6px;
+	box-shadow: 0px 3px 5px #888888;
+}
+
+/* contains title only menu links */
+#top
+{
+	background-image: url(microBG.jpg);
+	margin-bottom: 20px;	
+	min-height: 125px;
+	color: #000000; background-color: transparent;
+	border: 1px solid #333333;	
+	border-radius: 6px;
+	box-shadow: 0px 3px 5px #888888;
+}
+
+/* Replaces title and menus for phone, except for index ? */
+#topStrip
+{
+	display: none;
+}
+ 
+ #menu
+{
+	font: 100% 'Trebuchet MS', arial, sans-serif;
+	font-weight: bold;
+	line-height: 160%; text-align: center;
+	color: #000000; background-color: #085b38;
+	background-color: #444444;
+	padding-left: 10px; 
+	padding-top: 5px; padding-bottom: 5px;
+    
+    	/*--round top left and right--*/
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+#menuI
+{
+	display: none;
+}
+
+.menuButton 
+{ 
+	color: #F7F7F7; background-color: transparent; 
+	border: none;
+	margin-top: 5px; margin-bottom: 5px;
+	padding-top: 0px; padding-bottom: 0px;
+	padding-left: 10px; padding-right: 10px;
+	font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; 
+	text-align: center;
+	outline: none; text-decoration: none;
+	cursor: pointer;
+}
+
+.selected
+{
+	color: #999999; background-color: transparent; 
+	border: none;
+	margin-top: 5px; margin-bottom: 5px;
+	padding-top: 0px; padding-bottom: 0px;
+	padding-left: 10px; padding-right: 10px;
+	font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; 
+	text-align: center;
+	outline: none; text-decoration: none;
+	cursor: default;
+}
+
+/* White-rounded container for everything else */
+#bottomWrapper
+{}
+
+/* Holds controls and results */
+#centre
+{
+	color: #444444; background-color: #ffffff;
+	font: 75% Verdana, Arial, Helvetica, sans-serif;
+	line-height: 160%; text-align: justify;	
+	padding-left: 25px; padding-right: 25px;
+	padding-top: 25px; padding-bottom: 30px;
+    
+    /*--- round bottom corners so don't overlap innerWrapper ---*/	
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+/* Single line of explanation of function - larger than rest of text CLASS? */
+#explanation
+{
+	font: 115% "Verdana", "Helvetica", "Arial", sans-serif;
+	text-align: left; line-height: 150%;
+	padding-left: 20px; padding-right: 20px;
+	padding-top: 5px; padding-bottom: 10px;
+}
+
+/* Wrap controls in grey rounded rectangle */
+#controls
+{
+	font: 100% "Verdana", "Helvetica", "Arial", sans-serif;
+	text-align: left; line-height: 150%;
+	border: 1px solid #d9d9d9;
+	border-radius: 10px;
+	padding-left: 20px; padding-right: 20px;
+	padding-top: 10px; padding-bottom: 10px;
+}
+
+/* provides padding for inserted text on intro and feedback pages = to that on results */
+#insert
+{
+	color: #000000; background-color: #ffffff;
+	padding-left: 20px; padding-right: 20px;
+	padding-top: 0px; padding-bottom: 10px;
+}
+
+#inputField
+{
+	width: 50%;
+	height: 15px;
+}
+
+button
+{
+	margin-left: 20px;
+}
+
+/* drop-down autosuggest 'menu' - z puts in front of bar graphs etc */
+#popup
+{
+	z-index: 10;
+}
+
+/* hide/show linked text */
+#expand
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* for non-initial input label, providing stand-off to left and right and float as controls re-adjust*/
+.lableft
+{
+	margin-left: 15px;
+	margin-right: 4px;
+}
+
+.lableftFirst
+{
+	margin-right: 4px;
+}
+
+/* options area */
+#hideme
+{
+	width: 65%;
+	line-height: 180%;
+	background-color: #dddddd; 
+	padding-top: 10px; padding-bottom: 10px;
+	padding-left: 20px; padding-right: 10px;
+	margin-top: 5px;
+}
+
+/* patterned background for cells that are not part of the results table  */
+.patternBack
+{
+background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWNgYGAwZiAWYFcJABFmAGeceo4VAAAAAElFTkSuQmCC);
+}
+
+.resultsWrapper 
+{
+	margin: 0px 5px 0px 5px;
+}
+
+/* applied to div enclosing results tables */
+.results 
+{
+	margin-top: 6px;
+	width: 100%;
+	border-collapse: collapse;
+	font-family: "Arial", sans-serif;
+	background-color: white;
+	font-size: 105%;
+}
+
+/* right align all table cells except first column */
+table.results 
+{
+	text-align: right;
+	table-layout: fixed;
+	border: 2px solid #999999;
+}
+
+tr > th:first-child 
+{
+	text-align: left;
+}
+tr > td:first-child 
+{
+	text-align: left;
+}
+
+.results td,.results th 
+{
+	padding: 3px 3px 3px 3px;
+	border: 1px solid #ffffff;
+}
+
+.results th 
+{
+	text-align: left;
+	padding: 5px 5px 5px 5px;
+	background-color: #186848;
+	color: #f5f5f5;
+	
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.results tr.alt td 
+{
+	color: #000000;
+	background-color: #EAFFF7;
+}
+
+/* text emphasis for selected tissue */
+.uniTissue
+{
+	color:#005c37; font-weight:bold;
+}
+
+.geneTag 
+{
+	font-weight: bold;
+	/* color: #005c37; */
+	color: #333333;
+	text-decoration: none;
+	font-size: 65%;
+}
+
+.geneDetails
+{
+	font-family: "Arial", sans-serif;
+	font-weight: bold;
+	font-size: 100%;
+	overflow: auto;
+}
+
+ /* holds divs holding right button and statement of no of hits */
+ /* TODO remove border or add some padding above*/
+.box 
+{
+	width: 100%;
+	border: 1px solid #f5f5f5;
+	overflow: auto;
+}
+
+/* holds statement of no hits in results */
+.textBox 
+{
+	font: 120% Verdana, Helvetica, Arial, sans-serif;
+	text-align: left; line-height: 150%;
+	padding: 8px 0px 8px 4px;
+}
+
+/* holds statement of number of hits in results */
+.textBox2 
+{	
+	font: 120% Verdana, Helvetica, Arial, sans-serif;
+	text-align: left; line-height: 150%;
+	padding-top: 12px; padding-left: 4px;
+}
+
+/* indent bold gene info from small gene descripts above */
+.dent
+{
+	padding-left: 6px;
+}
+
+/* holds results info */
+.gene 
+{
+	background-color: #f5f5f5;
+	padding: 0px 0px 5px 0px;
+	border: 1px solid #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.left 
+{
+	float: left;
+	text-align: left;
+	padding-right: 10px;
+}
+
+.leftImage 
+{
+	float: left;
+	padding-right: 5px;
+	padding-top: 10px;
+	padding-left: 3px;
+}
+
+/* classes to float left or right buttons */
+
+.leftExpressionButton 
+{
+	padding-right: 9px;
+	float: left;
+	cursor: pointer;
+	display: block;
+}
+
+.hiddenLeftExpressionButton 
+{
+	padding-right: 9px;
+	float: left;
+	cursor: pointer;
+	display: none;
+}
+
+.rightButton
+{
+	float: right;
+	cursor: pointer;
+}
+
+.hiddenRightButton 
+{
+	float: right;
+	cursor: pointer;
+	display: none;
+}
+
+/* Colours for ND cells for abundance and enrichment */
+.abundND 
+{
+	text-align: left;
+	font-size: 75%;
+	color: #000000;
+}
+
+.enrichND 
+{
+	text-align: left;
+	font-size: 75%;
+	color: #ffffff;
+	background-color: rgb(255, 255, 255);
+}
+
+/* values in [ ] parentheses - de-emphasize */
+.parenth
+{
+	font-size: 90%;
+	font-weight: normal;	
+}
+
+.barComparison 
+{
+	font-family: "Arial", sans-serif;
+	margin-top: 10px;
+	font-size: 8pt;
+}
+
+/* tooltip rollover links (for GO descriptions) */
+a.tip 
+{
+	color:#000000; text-decoration:none;
+}
+
+a:hover.tip 
+{
+	color:#000000; text-decoration:none;
+	border-bottom:1px dotted;
+}
+
+/* styles for js-generate hide/show linked text */
+
+a#expand
+{
+	 color: #ffffff;
+	 background:  #666666; 
+	 padding-left: 10px;
+	 padding-right: 10px;
+	 padding-top: 5px;
+	 padding-bottom: 5px;
+}
+
+
+/*----------- Styles for feedback form ------------------*/
+
+table#feedback
+{
+	width: 60%;
+}
+
+.formField
+{
+	width: 100%;
+	color: #000000; background-color: #eeeeee; 
+	border: solid #999999 1px;
+}
+
+.formArea
+{
+	width: 100%;
+	color: #000000; background-color: #eeeeee;
+	border: solid #999999 1px;
+}
+
+.formLabel
+{
+	font-family: verdana, sans-serif;
+	font-size: 100%; text-align: left;
+}
+
+.formIntro
+{
+	font: 115%Verdana, Helvetica, Arial, sans-serif;
+	text-align: left; line-height: 150%;
+	margin-left: 5px; padding-bottom: 10px;
+}
+
+/*----------- Styles for floating window from Flannigan ------------------*/
+
+/* TODO fix width etc. for mobiles! */
+div.indexWindow		/* Containing-div for index - absolute position */
+{
+    position: absolute;  right: 20px; top: 100px; 
+    width: 480px; height: 290px;   /* Window size, not including borders */
+    border-top: 1px solid #333333;  
+    border-left: 1px solid #333333;
+    border-right: 1px solid #444444;
+    border-bottom: 1px solid #444444;
+    z-index: 50;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #888888;
+}
+
+div.indexBar	/* Dragbar for index with closebox */
+{
+    position: absolute; 
+    top: 0px; height: 18px;  	/* 16px + padding and borders */
+    width: 470px;           	/* 290 + 5px padding on left and right = 300 */
+    color: #ffffff;
+    background-color: #008852;
+    border-bottom: groove gray 2px; /* Border on bottom only */
+    padding: 3px 5px 2px 5px;  		/* Clockwise: top, right, bottom, left */
+    font-family: verdana, sans-serif; 
+    font-size: 14px; font-weight: bold; 
+    text-align: center;
+    cursor: move;
+    border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+
+}
+
+div.indexContent	/* Div for text content. Height diff gives bottom */
+{  
+    position: absolute;
+    top: 25px;                 /* 18px title + 2px border + 3px + 2px padding */
+    height: 255px;             /* 265px total - 25px titlebar - 10px padding */
+    width: 460px;              /* 500px width - 20px of padding */
+    padding: 5px;              /* Allow space on all four sides */
+    padding-left: 15px;
+    overflow: auto;            /* Give us scrollbars if we need them */
+    background-color: #ffffff;
+    opacity: .92;              /* DOM style for transparency */
+    filter: alpha(opacity=92); /* Transparency for IE */
+    text-align: left;   
+    border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.closebox
+{
+	text-align: right;
+	margin-bottom: 0px;
+	width: 20px;
+	float: right;
+}
+
+.closebox a 
+{
+	font-size: 10px; font-weight: bold;
+	color: #008852; background-color: #ffffff; 
+	border: 1px solid #000000;
+	outline: none; text-decoration: none;
+}
+
+.closebox a:hover
+{
+	color: #ffffff; background-color: #008852;
+	border: 1px solid #008852;
+}
+
+p.key /* Text content para style */
+{
+	font: 12px "Verdana", "Helvetica", "Arial", sans-serif;
+	color: #000000; background-color: #ffffff;
+	text-align: justify; line-height: 150%;
+	margin-bottom: 5px; margin-top: 0px;
+	text-indent: 0px;
+}
+
+/* STYLEs APPLIED TO HELP SECTION */
+
+.helpSec
+{ 
+	font: 100% "Verdana", "Helvetica", "Arial", sans-serif; 
+	text-align: left;
+	line-height: 150%;
+	border: 1px solid #2d5571;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+}
+.helpTitle
+{
+	font-size: 125%;
+	font-weight: bold;
+	color: #235282;
+}
+/* for span with up-down arrows */
+.helpTitle.onOff
+{
+	text-shadow: 3px 3px 3px #999999;
+}
+.helpSubT
+{
+	font-size: 110%;
+	font-weight: bold;
+	color: #235282;
+	margin-left: 30px;
+	line-height: 180%;
+}
+/* for span with up-down arrows */
+.helpTitle.onOff
+{
+	text-shadow: 3px 3px 3px #999999;
+}
+.helpContent
+{
+	font-size: 110%;
+	margin-left: 43px;
+	line-height: 180%;	
+}
+
+.conceal
+{
+	display: none;
+}
+
+.clearer
+{
+	clear:both;
+}
+
+.mobileOnly 
+{
+	display:none;
+}
+
+@media screen and (max-width:700px)
+{	
+	#wrapper 
+	{
+		border: none;
+ 		min-width : 99%;
+		max-width : 99%;
+		width: 99%;	
+		padding-right: 0px; padding-left: 0px; padding-bottom: 5px;
+	}
+
+}
+
+/* REDEFINITION FOR MOBILES  */
+
+/* Not sure that there is any point in this */
+@media screen and (max-width:625px)
+{
+	/* suppress full title and menus */
+	#innerWrapper
+	{
+		margin-top: 0;
+	}
+	
+	#top
+	{
+		display: none;
+	}
+	
+	h1
+	{
+		font-size: 175%;
+	}
+	
+	/* simple top strip for phones with back arrow and name */
+	#topStrip
+	{
+		display: block;
+		overflow: hidden;	/* to prevent this outer div shrinking! */
+		font: 160% "Arial", sans-serif;
+		font-weight: bold;
+		text-align: center;
+		color: #fdf6a4;
+		background-image: url(microBG.jpg);
+		line-height: 250%;
+		padding-bottom: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#topStrip a
+	{
+		color: white;
+		text-decoration: none;
+	}
+	#topL
+	{
+		float: left;
+		width: 15%;
+		font-size: 150%;
+	}
+	#topC
+	{
+		float: left;
+		width: 70%;	
+		text-align: center;
+	}
+	#topR
+	{
+		float:right;
+		width: 15%; 
+		text-align:right;
+		font-size: 150%;
+	}
+			
+	#menu
+	{
+		display: none;
+	}
+	
+	#menuI
+	{
+		display: block;	
+	}
+	
+	#menuI ul
+	{
+		list-style:none;
+		margin-left: -20px;
+		margin-top: 0;
+		margin-bottom: -10px;
+		font: 175% "Arial", sans-serif;
+		line-height: 170%;
+		font-weight: bold;
+	}
+	
+	a.indexLink 
+	{
+		color: #072440;
+		text-decoration: none;
+	}
+	
+	a.indexLink:visited 
+	{
+		color: #072440;
+		text-decoration: none;
+	}
+	
+	/* to separate wrapped controls */
+	select
+	{
+		margin-top: 8px;
+		margin-bottom: 12px;
+	}
+
+	input
+	{
+		margin-top: 8px;
+		margin-bottom: 12px;
+	}
+}
+
+/* For iPhone Plus and Max versions */		
+@media screen and (max-width:450px)
+{
+	.mobileOnly {display:block;}
+	.mobileHide {display:none;}	
+	
+	body
+	{
+		background: linear-gradient(white, white);
+	}
+	
+	#topStrip
+	{
+		font-size: 160%;
+	}
+	
+	p.noindent
+	{
+		text-align: left;
+	}
+	
+	#wrapper 
+	{
+		border: 0; border-radius: 0; 
+		box-shadow: 0px 0px 0px #ffffff;
+		margin-top:0;
+		min-width : 100%;
+		max-width : 100%;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;				/* to give margin in viewport */
+	}
+	
+	#innerWrapper 
+	{
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	
+	#top
+	{
+		background-image: url(microBG.jpg);
+		margin-bottom: 20px;	
+		min-height: 90px;
+		color: #000000; background-color: transparent;
+		border: 1px solid #333333;	
+		border-radius: 6px;
+		box-shadow: 0px 3px 5px #888888;
+	}
+	
+	#centre
+	{
+		padding-top: 0;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 5px;
+	}
+	
+	#insert
+	{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	#controls
+	{
+		font-size: 100%;
+		line-height: 200%;
+		margin-left: 5px; margin-right: 5px;
+	}
+	
+	#inputField
+	{
+		width: 70%;
+		margin-right: 20px;
+		height: 15px;
+	}
+	
+	.formIntro
+	{
+		padding-top: 15px;	
+	}
+	
+	#explanation
+	{
+		padding-top: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.lableft
+	{
+		margin-left: 0;
+		margin-right: 4px;
+	}
+	
+	button
+	{
+		margin-left: 0;
+		margin-top: 5px;
+	}
+	
+ 	table#feedback
+	{
+		width: 100%;
+	}
+	
+	.feedForm
+	{
+		width: 100%;
+	}
+	
+	.formLabel
+	{
+		display: none;
+	}
+
+ 	#hideme
+	{
+		width: 85%;
+	}
+	
+	img
+	{
+		max-width:100%; 
+		height: auto;
+	}
+
+	img.shrinkfit1
+	{
+		max-width:45%; 
+		height: auto;
+	}
+	img.shrinkfit2
+	{
+		max-width:100%; 
+		height: auto;
+	}
+	
+	span.forceBreak::after
+	{
+		content: '\a';
+		white-space: pre;
+	}
+	
+	span.breakBefore::before
+	{
+		content:'\a';
+		white-space: pre;
+	}
+	
+	.left 
+	{
+		float: none;
+	}
+	
+	.geneTag 
+	{
+		color: #333333;
+		font-size: 80%;
+		padding-left: 10px;
+	}
+	
+	.results th
+	{
+		font-size: 90%;
+	}
+	
+	.results td
+	{
+		font-size: 90%;
+	}
+	
+	tr > td:first-child 
+	{
+		font-family: "Archivo Narrow", "Arial", sans-serif;
+		font-size: 90%;
+		overflow: hidden;
+    	text-overflow: ellipsis;
+	}
+	
+	/* to allow suppression of change of font for short autocomplete menus */
+	.revertFont tr > td:first-child 
+	{
+		font-family: Verdaana, Helvetica, sans-serif;
+	}
+	
+	td.abundND 
+	{
+		font-size: 75%;
+	}
+
+	td.enrichND
+	{
+		font-size: 75%;
+	}
+
+	.parenth
+	{
+		font-size: 90%;	
+	}
+	
+	.helpSec
+	{
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+}
+
+/* For standard iPhone and Pro range */
+@media screen and (max-width:400px)
+{	
+	#hideme
+	{
+		width: 90%;
+	}
+	
+	#topStrip
+	{
+		font-size: 140%;
+	}
+	
+	button
+	{
+		margin-left: 0;
+		margin-top: 5px;
+	}
+}
+
+/* For old iPhone SE */
+@media screen and (max-width:350px)
+{	
+	#topStrip
+	{
+		font-size: 125%;
+	}
+	
+	#explanation
+	{
+		padding-top: 5px;
+	}
+	
+	.formIntro
+	{
+		padding-top: 5px;	
+	}
+}

@@ -1,0 +1,25 @@
+td
+{
+	color: #000000;
+	background-color: #FFFAFA;
+	border: 0px;
+	padding-left:5px;
+}
+
+.mouseOut 
+{
+	background-color: #708090;
+	color: #FFFAFA;
+}
+
+.mouseOver 
+{
+	background-color: #FFFAFA;
+	color: #000000;
+}
+
+#name_table
+{
+	border:0px;
+	background-color:#FFFAFA;
+}
