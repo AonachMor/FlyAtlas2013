@@ -1,0 +1,599 @@
+/* flyAtlas.css 13.09.2012 */
+
+html,body 
+{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+h1 
+{
+	text-align: center;
+	font-family: "Arial", sans-serif;
+	color: white;
+	font-size: 250%;
+	padding: 5px;
+	margin-bottom: 0px;
+}
+
+h2 
+{
+	background-color: #008852;
+	text-align: center;
+	font-family: "Arial", sans-serif;
+	color: #96bcd5;
+	font-size: 13.5pt;
+	padding: 3px 0px 0px 0px;
+	border: 0px;
+	margin: 0px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+/* h2 link text: active and inactive */
+h2 .active 
+{
+	color: white;
+	text-decoration: none;
+	padding-right: 10px; padding-left: 10px;
+}
+
+h2 .inactive 
+{
+	color: #96D5BC;
+	text-decoration: none;
+	padding-right: 10px; padding-left: 10px;
+}
+
+h3 
+{
+	font: 16px Arial, Verdana, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #000000; background-color: #ffffff;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+p
+{
+	font: 14px Verdana, Helvetica, Arial, sans-serif;
+	color: #000000; background-color: #ffffff;
+	text-align: justify; line-height: 150%;
+	margin-bottom: 0px; margin-top: 0px;
+	text-indent: 15px;
+}
+
+p.noindent 
+{
+	text-indent: 0px;
+}
+
+p a
+{
+	color:#008852;
+	text-decoration:none;
+}
+
+/* for placing help icon */
+p.help
+{
+	text-align: right;
+	background-color: #005c37; 
+	padding-right: 75px;
+	margin-bottom: 15px;
+}
+
+/* reproduces default p for use in controls */
+p.standard
+{
+	font-size:12px; 
+	text-align: left; 
+	line-height: 150%; 
+	text-indent:0px;
+	margin-bottom: 12px; margin-top: 12px;
+}
+
+img
+{
+	border: 0px solid white;
+}
+
+/* positions link image on line */
+.linkImg
+{
+	padding-left: 20px;
+	padding-top:15px; 
+}
+
+/* Grey gradient covers top 300 px of body background */
+#topgradient 
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	/* For WebKit (Safari, Google Chrome etc) */
+	background: -webkit-gradient(linear, left top, left bottom, from(#c5c5c5), to(#ffffff) );
+	/* For Mozilla/Gecko (Firefox etc) */
+	background: -moz-linear-gradient(top, #c5c5c5, #ffffff);
+	/* For Internet Explorer 5.5 - 7 */
+	filter: progid :DXImageTransform.Microsoft.gradient (     
+		 startColorstr =  #c5c5c5, endColorstr =  #FFFFFFFF );
+	/* For Internet Explorer 8 */
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.gradient(startColorstr=#c5c5c5, endColorstr=#ffffff)";
+}
+
+/* (ex #content) Outer-most div; 10px top pad; z-index so above topgradient */
+#wrapper 
+{
+	position: relative;
+	z-index: 1;
+	padding-top: 10px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+}
+
+/* (ex #middle) Green rounded rect. Box shadows give black edge */
+#container 
+{
+	background-color: #005c37;
+	width: 850px;
+	padding: 10px;
+	overflow: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: inset 0 0 10px #000000, 3px 3px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000, 3px 3px #000000;
+	box-shadow: inset 0 0 10px #000000, 3px 3px #000000;
+}
+
+/* contains title and menu links */
+#top 
+{
+	padding: 0px;
+}
+
+/* (ex #bottom) White-rounded container for everything else */
+#main 
+{
+	background-color: #ffffff;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+/* (ex #gradient) used to give fuzzy bleed to bottom of menu */
+#menubleed 
+{
+	font-size: 50%;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	/* For WebKit (Safari, Google Chrome etc) */
+	background: -webkit-gradient(linear, left top, left bottom, from(#008852),
+		to(#ffffff) );
+	/* For Mozilla/Gecko (Firefox etc) */
+	background: -moz-linear-gradient(top, #008852, #ffffff);
+	/* For Internet Explorer 5.5 - 7 */
+	filter: progid : DXImageTransform.Microsoft.gradient (     
+		 startColorstr = #008852, endColorstr = #FFFFFFFF);
+	/* For Internet Explorer 8 */
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.gradient(startColorstr=#008852, endColorstr=#FFFFFFFF)";
+}
+
+/* (ex #pad) Holds controls and results */
+#contents 
+{
+	color: #000000; background-color: #ffffff;
+	text-align: left;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+/* Single line of explanation of function - larger than rest of text */
+#explanation
+{
+	font: 14px Verdana, Helvetica, Arial, sans-serif;
+	text-align: left; line-height: 150%;
+	padding-left: 20px; padding-right: 20px;
+	padding-top: 5px; padding-bottom: 10px;
+}
+
+/* Wrap controls in grey rectangle */
+#controls
+{
+	font: 12px Verdana, Helvetica, Arial, sans-serif;
+	text-align: left; line-height: 150%;
+	border: 1px solid #d9d9d9;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding-left: 20px; padding-right: 20px;
+	padding-top: 10px; padding-bottom: 10px;
+}
+
+/* provides padding for inserted text on intro and feedback pages equivalent to that on results */
+#insert
+{
+	color: #000000; background-color: #ffffff;
+	padding-left: 20px; padding-right: 20px;
+	padding-top: 0px; padding-bottom: 10px;
+}
+
+button
+{
+	margin-left: 20px;
+}
+
+/* drop-down autosuggest 'menu' - z puts in front of bar graphs etc */
+#popup
+{
+	z-index: 10;
+}
+
+/* hide/show linked text */
+#expand
+{
+	color: #005c37;
+	text-decoration: none;
+}
+
+/* left hidden options */
+#leftOpt
+{
+	width:250px;
+}
+
+/* right hidden options */
+#rightOpt
+{
+	width:450px; 
+	float:right;
+}
+
+/* for non-initial input lablel, providing standoff to left and right and float as controls readjust*/
+.lableft
+{
+	margin-left: 15px;
+	margin-right: 4px;
+}
+
+.lableftFirst
+{
+	margin-right: 4px;
+}
+
+/* options area */
+#hideme
+{
+	line-height: 180%;
+	background-color: #b8e5d3; 
+	padding-top: 10px; padding-bottom: 10px;
+	padding-left: 20px; padding-right: 10px;
+	margin-top: 5px;
+}
+
+/* patterned background for cells that are not part of the results table  */
+.patternBack
+{
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWNgYGAwZiAWYFcJABFmAGeceo4VAAAAAElFTkSuQmCC);
+}
+
+.rightImg 
+{
+	float: right;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#page-background 
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.feedbackDiv 
+{
+	margin: 0px 5px 0px 5px;
+}
+
+/* this style is applied to div encolsing results tables */
+.feedback 
+{
+	margin-top: 6px;
+	width: 100%;
+	border-collapse: collapse;
+	font-family: "Arial", sans-serif;
+	background-color: white;
+	font-size: 12pt;
+}
+
+/* right align all table cells except first column */
+table.feedback 
+{
+	text-align: right;
+}
+
+tr > th:first-child 
+{
+	text-align: left;
+}
+tr > td:first-child 
+{
+	text-align: left;
+}
+
+.feedback td,.feedback th 
+{
+	padding: 3px 3px 3px 3px;
+	border: 1px solid #E6FFF5;
+}
+
+.feedback th 
+{
+	text-align: left;
+	padding: 5px 5px 5px 5px;
+	background-color: #6CA68F;
+	color: #f5f5f5;
+}
+
+.feedback tr.alt td 
+{
+	color: #000000;
+	background-color: #EAFFF7;
+}
+
+/* text emphasis for selected tissue */
+.uniTissue
+{
+	color:#005c37; font-weight:bold;
+}
+
+.bigwhitetext 
+{
+	color: white;
+	text-decoration: none;
+	font-size: 14pt;
+}
+
+.smallgreentext 
+{
+	color: #96D5BC;
+}
+
+.greytext 
+{
+	color: #606060;
+	text-decoration: none;
+}
+
+.blacktext 
+{
+	color: black;
+	text-decoration: none;
+}
+
+.greensup 
+{
+	font-weight: bold;
+	color: #005c37;
+	text-decoration: none;
+	vertical-align: super;
+	font-size: 6pt;
+}
+
+.greensub 
+{
+	font-weight: bold;
+	color: #005c37;
+	text-decoration: none;
+	font-size: 6pt;
+}
+
+.bold 
+{
+	font-family: "Arial", sans-serif;
+	font-weight: bold;
+	font-size: 12pt;
+	overflow: auto;
+}
+
+ /* holds divs holding right button and statement of no of hits */
+ /* remove border or add some padding above*/
+.box 
+{
+	width: 100%;
+	border: 1px solid #f5f5f5;
+	overflow: auto;
+}
+
+/* used to hold statement of no hits in results */
+.textBox 
+{
+	font: 14px Verdana, Helvetica, Arial, sans-serif;
+	text-align: left; line-height: 150%;
+	padding: 8px 0px 8px 4px;
+}
+
+/* used to hold statement of number of hits in results */
+.textBox2 
+{	
+	font: 14px Verdana, Helvetica, Arial, sans-serif;
+	text-align: left; line-height: 150%;
+	padding-top: 12px; padding-left: 4px;
+}
+
+/* indent bold gene info from small gene descripts above */
+.dent
+{
+	padding-left: 6px;
+}
+
+/* holds results info */
+.gene 
+{
+	background-color: #f5f5f5;
+	padding: 0px 0px 5px 0px;
+	border: 1px solid #E6FFF5;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.left 
+{
+	float: left;
+	text-align: left;
+	padding-right: 10px;
+}
+
+.leftImage 
+{
+	float: left;
+	padding-right: 5px;
+	padding-top: 10px;
+	padding-left: 3px;
+}
+
+/* classes to float left or right buttons */
+
+.leftExpressionButton 
+{
+	padding-right: 9px;
+	float: left;
+	cursor: pointer;
+	display: block;
+}
+
+.hiddenLeftExpressionButton 
+{
+	padding-right: 9px;
+	float: left;
+	cursor: pointer;
+	display: none;
+}
+
+.rightButton
+{
+	float: right;
+	cursor: pointer;
+}
+
+.hiddenRightButton 
+{
+	float: right;
+	cursor: pointer;
+	display: none;
+}
+
+/* Colours for ND cells for abundance and enrichment */
+
+.abundND 
+{
+	text-align: left;
+	font-size: 8pt;
+	color: #000000;
+}
+
+.enrichND 
+{
+	text-align: left;
+	font-size: 8pt;
+	color: #ffffff;
+	background-color: rgb(255, 255, 255);
+}
+
+/* values in [ ] parentheses - de-emphasize */
+.parenth
+{
+	font-size: 14px;
+	font-weight: normal;	
+}
+
+.barComparison 
+{
+	font-family: "Arial", sans-serif;
+	margin-top: 10px;
+	font-size: 8pt;
+}
+
+/* tooltip rollover links (for GO descriptions) */
+a.tip 
+{
+	color:#000000; text-decoration:none;
+}
+
+a:hover.tip 
+{
+	color:#000000; text-decoration:none;
+	border-bottom:1px dotted;
+}
+
+/* styles for js-generate hide/show linked text */
+
+a#expand
+{
+	 color: green;
+	 background:  #b8e5d3; 
+	 padding-left: 10px;
+	 padding-right: 10px;
+	 padding-top: 5px;
+	 padding-bottom: 5px;
+}
+
+
+/*----------- Styles for feedback form ------------------*/
+
+.formField
+{
+	width: 400px;
+	color: #000000; background-color: #eefff7; 
+	border: solid #999999 1px;
+}
+
+.formArea
+{
+	width: 400px;
+	color: #000000; background-color: #eefff7;
+	border: solid #999999 1px;
+}
+
+.formLabel
+{
+	font-family: verdana, sans-serif;
+	font-size: 12px; text-align: left;
+}
+
+.formIntro
+{
+	font: 14px Verdana, Helvetica, Arial, sans-serif;
+	text-align: left; line-height: 150%;
+	margin-left: 5px; padding-bottom: 10px;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>FlyAtlas APIs</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="scripts/flyAtlas.css">
+</head>
+<body>
+<div id="topgradient"></div>
+<div id="wrapper">
+<div id="container">
+<div id="top"><h1>FlyAtlas APIs</h1>
+
+</div>
+<div id="main">
+<div id="menubleed">&nbsp; </div>
+<div id="contents">
+
+<div id="insert">
+<div class="formIntro">
+<p class="noindent">The FlyAtlas database can be queried through programmatic HTTP requests to the ‘flydirect’ server application, allowing tissue expression data for individual genes to be retrieved in formats suitable for use by program developers. 
+The formats available are plain-text (tab-separated) or XML.</p>
+<h3>Base URL</h3>
+http://motif.mvls.gla.ac.uk:8080/flydirect/index.html?
+
+<h3>Argument: idtype</h3>
+This is required, and must have as value one of: ‘fbgn’, ‘cgnum’, ‘symbol’ or ‘name’.
+
+<h3>Argument: gene</h3>
+This is required, and must have a value appropriate to the idtype, and be in the correct case. Spaces must be URL-escaped (see example 5, below). Greek (UTF-8) and Romanized characters are supported.
+
+<h3>Argument: output</h3>
+This can have the values ‘txt’ or ‘xml’. If the argument is omitted, the output format defaults to plain-text.
+
+<h3>Example Queries</h3>
+1. http://motif.mvls.gla.ac.uk:8080/flydirect/index.html?idtype=fbgn&amp;gene=FBgn0016038<br>
+2. http://motif.mvls.gla.ac.uk:8080/flydirect/index.html?idtype=cgnum&amp;gene=CG16834<br>
+3. http://motif.mvls.gla.ac.uk:8080/flydirect/index.html?idtype=symbol&amp;gene=W<br>
+4. http://motif.mvls.gla.ac.uk:8080/flydirect/index.html?idtype=name&amp;gene=hamlet<br>
+5. http://motif.mvls.gla.ac.uk:8080/flydirect/index.html?idtype=name&amp;gene=wings+down&amp;output=xml<br>
+<p>These can be tested by pasting into the address bar of a web browser. Note that example 4 lists the results of hybridization of mRNA from the same gene to two different probe sets.</p>
+
+<h3>Example Output: Plain Text</h3>
+<p class="noindent">The tab-separated plain text output from the query in example 3 is shown below, with a key in red. 
+(Abund’ = Abundance, Enrich’ = Enrichment. Run the query through the interactive <a href="http://motif.mvls.gla.ac.uk:8080/">web interface</a> if you require further clarification.)</p>
+<pre>
+No of matching results found: 1		<span style="color:red;">Degeneracy</span>
+
+1640235_at				<span style="color:red;">Probe Set ID</span>
+FBgn0003997				<span style="color:red;">FlyBase ID</span>
+CG5123					<span style="color:red;">Annotation ID (CG number)</span>
+W					<span style="color:red;">Gene Symbol</span>
+Wrinkled				<span style="color:red;">Gene Name</span>
+Adult	Head	30.7	2.3	1.3	0	4
+Adult	Eye	46.0	3.6	1.9	+	4
+Adult	Brain	25.0	2.0	1.0	0	4
+Larval	CNS	29.32	2.4	1.22	0	4
+Adult	Thoracicoabdominal ganglion	17.7	1.2	0.7	0	4
+Adult	Crop	98.0	6.0	4.1	+	4
+Adult	Midgut	34.0	3.2	1.4	0	4
+Larval	Midgut	4.7	0.5	0.19	-	0
+Adult	Hindgut	39.1	0.8	1.6	+	4
+Larval	Hindgut	56.8	2.9	2.35	+	4
+Adult	Tubule	9.6	1.2	0.4	-	2
+Larval	Tubule	3.4	0.3	0.1	-	0
+Adult	Fat body	13.2	2.9	0.55	0	4
+Larval	Fat body	9.8	1.7	0.4	-	2
+Adult	Salivary gland	18.8	1.6	0.78	0	3
+Larval	Salivary gland	9.7	0.8	0.4	-	4
+Adult	Heart	37.0	3.0	1.5	+	4
+Larval	Trachea	36.0	11.0	1.5	0	4
+Adult	Ovary	26.4	0.4	1.1	0	4
+Adult	Virgin Spermatheca	9.7	1.4	0.4	-	4
+Adult	Mated Spermatheca	11.9	1.6	0.49	-	4
+Adult	Testis	12.1	1.0	0.5	0	4
+Adult	Accessory glands	24.5	3.2	1.0	0	4
+Adult	Carcass	36.7	1.6	1.5	+	4
+Larval	Carcass	30.5	9.6	1.3	0	4
+<span style="color:red;">Stage	Tissue 	Abund'	SE	Enrich'	Change	No. Replicates
+</span></pre>
+
+<h3>Example Output: XML</h3>
+<p class="noindent">An intial portion of the XML output from the query in example 5 is shown below.</p>
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE flyatlas SYSTEM "http://motif.mvls.gla.ac.uk:8080/flydirect/flyatlas.dtd"&gt;
+&lt;flyatlas&gt;
+	&lt;gene fbgn="FBgn0005642" cgnum="CG1454" symbol="wdn" name="wings down"&gt;
+		&lt;probeset probesetID="1635761_at"&gt;
+			&lt;fly stage="adult"&gt;
+				&lt;tissue type="Head"&gt;
+					&lt;abundance&gt;52.7&lt;/abundance&gt;
+					&lt;se&gt;2.6&lt;/se&gt;
+					&lt;enrichment&gt;0.4&lt;/enrichment&gt;
+					&lt;change&gt;-&lt;/change&gt;
+					&lt;replicates&gt;4&lt;/replicates&gt;
+				&lt;/tissue&gt;
+				&lt;tissue type="Eye"&gt;
+					&lt;abundance&gt;66.5&lt;/abundance&gt;
+					&lt;se&gt;6.3&lt;/se&gt;
+					&lt;enrichment&gt;0.5&lt;/enrichment&gt;
+					&lt;change&gt;-&lt;/change&gt;
+					&lt;replicates&gt;4&lt;/replicates&gt;
+				&lt;/tissue&gt;
+				&lt;tissue type="Brain"&gt;
+				...
+</pre>
+
+<h3>Interactive Testing</h3>
+<p class="noindent">You can test this interactively <a href="DirectTest.html">here</a>.</p>
+
+</div>
+</div>
+
+</div></div></div></div>
+
+
+</body>
+</html>
