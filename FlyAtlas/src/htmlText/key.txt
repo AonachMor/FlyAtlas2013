@@ -1,0 +1,20 @@
+<!-- start of key insert -->
+<div class="indexWindow" id="indexWin" style="display:none;"> 
+<div class="indexBar" onmousedown="drag(this.parentNode, event);">Results Key
+<div class="closebox"><a href="#" onclick="closeIndex('indexWin'); return(false);">&nbsp;&times;&nbsp;</a>
+</div>
+</div>
+<div class="indexContent" id="indexCont">
+<p class="key"><img src="buttons/A4.png" alt="" style="vertical-align: sub"> <strong>Ambiguous</strong>
+<br>This probe-set detects other genes.</p>
+<p class="key"><img src="buttons/D4.png" alt="" style="vertical-align: sub"> <strong>Duplicate</strong>
+<br>This gene is detected by other probe-sets (but less well or ambiguously).</p>
+<p class="key"><img src="buttons/D4u.png" alt="" style="vertical-align: sub"> <strong>Sole Unambiguous Duplicate</strong>
+<br>The other probe-sets that detect this gene are all ambiguous (see above).</p>
+<p class="key"><strong>ND</strong>
+<br>No signal detected in any of the four replicate arrays.</p>
+<p class="key"><strong>[ ]</strong>
+<br>Signal value in parentheses is from fewer than four replicate arrays.</p>
+</div>
+</div> 
+<!-- end of key insert -->

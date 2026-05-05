@@ -1,0 +1,421 @@
+<!-- 1st Help section: About FA2013 -->
+<div class="helpSec">
+<div class="helpTitle">
+<a href="javascript:toggleConcealed('bt1','hs1','&#9658;','&#9660');" title="reveal help"><span id="bt1" class="helpTitle onOff">▶</span></a> About FlyAtlas 2013
+</div>
+
+<div id="hs1" class="conceal helpContent">
+FlyAtlas provides access to data regarding which genes are expressed in which tissues of <em>Drosophila melanogaster</em>. The data are derived from the work of Julian Dow’s group in the University of Glasgow, in which mRNA from the dissected tissues was hydbridized to microarrays of oligonucleotides representing the <em>Drosophila</em> genome. FlyAtlas 2013 offers an alternative interface to the same data as that on the original flyatlas site (www.flyatlas.org).
+</div><!-- end of conceal div -->
+</div>
+<!-- End of 1st Help section -->
+
+<!-- 2nd Help section: Search Types -->
+<div class="helpSec">
+<div class="helpTitle">
+<a href="javascript:toggleConcealed('bt2','hs2','&#9658;','&#9660;');" title="reveal help"><span id="bt2" class="helpTitle onOff">▶</span></a> Searching &amp; Search Types
+</div>
+	<!-- 2.1 Main Search Types -->
+<div id="hs2" class="conceal">
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt2_1','hs2_1','&#9655;','&#9661;');" title="reveal help"><span id="bt2_1" class="helpTitle onOff">▷</span></a> Main Search Types</div>
+	<div id="hs2_1" class="conceal helpContent">
+	Three main types of search can be performed after selecting the appropriate section from the menu. <strong>Gene</strong> searches are made for a particular gene or list of genes using  the names or identifiers assigned by FlyBase; <strong>Category</strong> searches are made for protein-coding genes using descriptive terms that are part of their gene ontologies; <strong>Tissue</strong> searches find which genes in a selected category have the greatest expression in a particular tissue; and <strong>Profile searches</strong> find other genes with a similar profile of expression across tissues.<br> In addition there are two special facilities: The <strong>Top</strong> search for finding which genes have the greatest expression in a particular tissue; and the <strong>Development</strong> search for finding which genes show the greatest difference in expression between larva and adult in a particular tissue. 
+	</div>
+	<!-- 2.2 Autosuggest -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt2_2','hs2_2','&#9655;','&#9661;');" title="reveal help"><span id="bt2_2" class="helpTitle onOff">▷</span></a> Autosuggest</div>
+	<div id="hs2_2" class="conceal helpContent">
+	
+FlyAtlas 2013 is designed so that a search for a gene or category of genes need never return “Not found”. This is done using an autosuggest which operates as one types into the text box (the number of letters one needs to type varies with the term). The database is polled and a drop-down menu is populated with genes or gene terms beginning with or containing what has been typed: “If it isn’t in the autosuggest, it isn’t in the database”. If a gene <em>is</em> missing from the FlyAtlas database, it may be one of a small number not covered by the Affymetrix probe set. Alternatively the name or symbol may no longer be current: you can check this on FlyBase.<br>
+<div style="text-align:center;"><img src="graphics/auto.png" alt=""></div>
+
+GENES: For gene symbols and gene names the standard ‘completion’ autosuggest (i.e. extensions of the term to the right) does not operate until two letters have been typed. Nevertheless, because there are several genes with a single-letter symbol (e.g. ‘w’) there is a special form of autosuggest after typing a single character: any corresponding gene (regardless of case, ie. ‘w’ and ‘W’) will be listed. The gene searches themselves are case-sensitive, however — only the one chosen will be searched.
+<br>
+CATEGORIES: In a category search the categories are equivalent to ‘gene ontologies’ (http://www.geneontology.org/). The suggestions here are ‘containing’ suggestions, extending to both the left and right of what has been typed:
+<div style="text-align:center;"><img src="graphics/melanin.png" alt=""></div>
+Because the gene ontologies are often quite narrow there is a facility for a ‘free’ search, which will encompass several gene ontologies containing a term (e.g. ‘melanin’ in the example illustrated, or ‘melan’ to pick up even more ontologies). In this case there is no autosuggest, and searches will fail if a term is mistyped or is not in any gene ontology.
+</div>
+	<!-- 2.3 Greek Characters -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt2_3','hs2_3','&#9655;','&#9661;');" title="reveal help"><span id="bt2_3" class="helpTitle onOff">▷</span></a> Greek Characters in Input</div>
+	<div id="hs2_3" class="conceal helpContent">Autosuggest will add Greek characters (e.g. eIF-2β from eI), and will autocomplete after a single Greek character (e.g. βTub56D from β). Characters that start gene symbols or names are α β γ δ ε η ι κ λ θ ζ , and may be copied from here and pasted into a text box. Alternatively one can type the Latin equivalents (alpha, beta etc.).</div>
+	
+		<!-- 2.4 Abundance and Enrichment -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt2_4','hs2_4','&#9655;','&#9661;');" title="reveal help"><span id="bt2_4" class="helpTitle onOff">▷</span></a> Abundance and Enrichment</div>
+	<div id="hs2_4" class="conceal helpContent">The term ‘abundance’ is used to mean the absolute extent of expression — the hybridization signal in arbitrary units.<br>The term ‘enrichment’ is used to mean the expression relative to the average (1.0) in whole flies. Enrichment values are more meaningful for tissues with a mass much smaller (or greater) than the average. </div>
+	
+<!-- 2.10 Gene Search -->
+		<div class="helpSubT"><a href="javascript:toggleConcealed('bt2_10','hs2_10','&#9655;','&#9661;');" title="reveal help"><span id="bt2_10" class="helpTitle onOff">▷</span></a> Gene Search</div>
+	<div id="hs2_10" class="conceal helpContent">
+The function of the Gene Search is to find the expression of a particular gene in different tissues.<br>
+
+INPUT SEARCH TERM<br>
+There are four alternative ways of specifying a gene:<br>
+(a) Gene Symbol<br>
+(b) Gene Name<br>
+(c) Annotation symbol<br>
+(d) FlyBase ID<br>
+The autosuggest for a Symbol or Name starts after two characters, that for an Annotation symbol starts after five characters, and that for a FlyBase ID after nine.
+<br>
+
+OPTIONS<br>
+(a) Include Duplicate hits: see 'Results' for explanation.<br>
+(b) Include Ambiguous hits: see 'Results' for explanation.<br>
+(c) Show standard errors: the default is not to show these.<br>
+<div style="text-align:center;"><img src="graphics/geneOptions.png" alt=""></div>
+
+DIFFERENT-CASE GENES, DUPLICATES &amp; AMBIGUITY<br>
+Searches using a gene term are case-sensitive. This is to distinguish between genes having the same symbols with different case (e.g. LKR and Lkr). It is therefore important to select the name from the autosuggest menu to ensure that results for the intended gene are retrieved.
+<br>
+When a gene is detected by more than one probe-set only the results from the best probe-set are shown, but the results are flagged with a D. The user may run searches with all duplicates displayed by first selecting the option ‘Include duplicate hits’.
+<br>
+When a gene is only detected by an ambiguous probe-set (one that detects other genes) one is altered to this fact. One may run searches with the results for ambiguous probe-sets displayed by first selecting the option ‘Include ambiguous hits’. In this case details of the other genes hybridizing to the probe-set are provided.
+<br>
+In certain cases a group of ‘Duplicates’ has only one unambiguous member in which case the ‘D’ in the duplicate icon is followed by a red dot. To see the ambiguous duplicates the user needs to re-run the search with both the options ‘Include duplicate hits’ and ‘Include ambiguous hits’ selected.
+<br>
+
+LINKS OUT<br>
+The Icon launches a page with gene links to various Drosophila resources, including the same gene in FlyAtlas 2, if it is represented in the later facility.
+<br>
+<div style="text-align:center;"><img src="graphics/geneLinks.png" alt="">
+</div>	
+</div>
+	
+	<!-- 2.12 Category Search -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt2_12','hs2_12','&#9655;','&#9661;');" title="reveal help"><span id="bt2_12" class="helpTitle onOff">▷</span></a> Category Search</div>
+	<div id="hs2_12" class="conceal helpContent">
+The function of the Category Search is to find the expression of genes of a specific category in different tissues.<br>
+
+INPUT SEARCH TERM<br>
+There are three alternative ways of searching for a gene category:<br>
+(a) Category<br>
+(b) Gene Ontology ID<br>
+(c) Free Search<br>
+The autosuggest for a Category (a gene ontology) starts after three characters, and that for a Gene Ontology ID after five characters. There is no autosuggest for a Free Search, but such searches will retrieve results for all the gene ontologies in which the search term is present. Thus, it may be useful to start typing the term of interest with ‘Category’ selected then, if too many terms are listed, identify a keyword found in several terms and use this for a free search.<br>
+
+OPTIONS<br>
+A pull-down menu allows one to display more than the default 25 results: 
+<div style="text-align:left;"><img src="graphics/display.png" alt=""></div>
+In addition, the following options are available:<br>
+(a) Include Duplicate hits: see 'Results' for explanation.<br>
+(b) Include Ambiguous hits: see 'Results' for explanation.<br>
+(c) Show standard errors: the default is not to show these.<br>
+<div style="text-align:center;"><img src="graphics/geneOptions.png" alt=""></div>
+
+DUPLICATES AND AMBIGUITY<br>
+When a gene is detected by more than one probe-set only the results from the best probe-set are shown, but the results are flagged with a D. The user may run searches with all duplicates displayed by first selecting the option ‘Include duplicate hits’.
+<br>
+By default, genes that are only detected by an ambiguous probe-set (one that detects other genes) are not included in the results of Category searches, but their IDs are listed at the end of the results. The user may run searches with the results for ambiguous probe-sets displayed by first selecting the option ‘Include ambiguous hits’.In this case details of the other genes hybridizing to the probe-set are provided.
+<br>
+In certain cases a group of ‘Duplicates’ has only one unambiguous member in which case the ‘D’ in the duplicate icon is followed by a red dot. To see the ambiguous duplicates the user needs to re-run the search with both the options ‘Include duplicate hits’ and ‘Include ambiguous hits’ selected.
+<br>
+
+PRESENTATION OF RESULTS<br>
+As many results are possible in Category searches the initial presentation is just of the details of the genes found. At the left of each entry is a toggle button for displaying (or hiding) the table for that gene, and at the top right of the listing is a toggle button that operates on all tables.
+<br>
+<div style="text-align:center;"><img src="graphics/catToggle.png" alt="">
+</div><br>
+
+LINKS OUT<br>
+The Icon launches a page with gene links to various Drosophila resources.<br>
+<div style="text-align:center;"><img src="graphics/catLinks.png" alt="">
+</div>
+<br>GENE ONTOLOGY ID<br>
+This provides a link to the AmiGO gene ontology entry. (Holding the cursor over the ID brings up a description of the term in a ‘tool tip’.)
+<br>
+<div style="text-align:center;"><img src="graphics/gotip.png" alt="">
+</div>
+</div>
+
+	<!-- 2.13 Profile Search -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt2_13','hs2_13','&#9655;','&#9661;');" title="reveal help"><span id="bt2_13" class="helpTitle onOff">▷</span></a> Profile Search</div>
+	<div id="hs2_13" class="conceal helpContent">
+The function of the Profile Search is to find genes that are similar to a gene of interest in their profile of expression across different tissues.
+<br>
+INPUT SEARCH TERM<br>
+There are four alternative ways of specifying a gene:<br>
+(a) Gene Symbol<br>
+(b) Gene Name<br>
+(c) Annotation symbol<br>
+(d) FlyBase ID<br>
+The autosuggest for a Symbol or Name starts after two characters, that for an Annotation symbol starts after five characters, and that for a FlyBase ID after nine.
+<br>
+OPTIONS<br>
+In addition to the control for electing to see more than the default 25 results, and the standard option,<br>
+(a) Show standard errors<br>
+some statistical options are also available:<br>
+(b) To use Spearman rather than Pearson correlation statistics<br>
+(c) To change the value of r from its default of 0.7. A value of r=1 indicates perfect correlation, whereas r=0 indicates no correlation.
+ (A cut-off of 0.05 is used for P<sub>B</sub>, the Bonferroni-corrected probability; so decreasing the value of r below 0.7 often produces no more hits.)<br>
+<div style="text-align:center;"><img src="graphics/profileOptions.png" alt=""></div>
+DUPLICATES AND AMBIGUITY<br>
+There is no option to run Profile searches with duplicate or ambiguous hits included. When a gene is detected by more than one probe-set only the results from the best probe-set are shown; if a gene is only detected by an ambiguous probe-set (one that detects other genes) it is excluded from the results.
+<br>
+PRESENTATION OF RESULTS<br>
+The initial presentation of results is as tables. Toggle buttons allow one to switch between this view and seeing the results as bar graphs, except when using a mobile device.
+<div style="text-align:left;"><img src="graphics/profileIcons.png" alt=""></div>
+Following details of the genes, the values of the correlation statistic, r, and Bonferroni-corrected probability, P<sub>B</sub>, are presented:
+<div style="text-align:left;"><img src="graphics/stats.png" alt=""></div>
+There is not sufficient room to accomodate the names of the tissues on the bar charts, but the key is:
+<br>
+<div style="text-align:center;"><img src="graphics/barChart.png" alt=""></div>
+LINKS OUT<br>
+The icon launches a page with gene links to various Drosophila resources.
+<div style="text-align:center;"><img src="graphics/profLinks.png" alt="">
+</div>
+
+</div>
+
+		<!-- 2.8 Tissue Search -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt2_8','hs2_8','&#9655;','&#9661;');" title="reveal help"><span id="bt2_8" class="helpTitle onOff">▷</span></a> Tissue Search</div>
+		<div id="hs2_8" class="conceal helpContent">
+The function of the Tissue Search is to find which genes of a particular category show the greatest expression in a specific tissue.
+<br> 
+SEARCH PARAMETERS<br> 
+The user selects:<br> 
+(i) A stage (adult or larval) followed by a tissue<br> 
+(ii) Abundance or enrichment as the criterion of expression<br> 
+(iii) The maximum number of results to be displayed<br> 
+and then enters:<br> 
+(iv) A gene category (with the aid of the autosuggest facility).
+<br> 
+OPTIONS<br> 
+(a) Include Duplicate hits: see 'Results' for explanation.<br>
+(b) Include Ambiguous hits: see 'Results' for explanation.<br>
+(c) Show standard errors: the default is not to show these.<br>
+<div style="text-align:center;"><img src="graphics/geneOptions.png" alt=""></div>
+
+DUPLICATES AND AMBIGUITY<br> 
+When a gene is detected by more than one probe-set only the results from the best probe-set are shown, but the results are flagged with a D. The user may run searches with all duplicates displayed by first selecting the option ‘Include duplicate hits’.
+<br>
+By default, genes that are only detected by an ambiguous probe-set (one that detects other genes) are not included in the results of Category searches, but their IDs are listed at the end of the results. The user may run searches with the results for ambiguous probe-sets displayed by first selecting the option ‘Include ambiguous hits’.In this case details of the other genes hybridizing to the probe-set are provided.
+<br>
+In certain cases a group of ‘Duplicates’ has only one unambiguous member in which case the ‘D’ in the duplicate icon is followed by a red dot. To see the ambiguous duplicates the user needs to re-run the search with both the options ‘Include duplicate hits’ and ‘Include ambiguous hits’ selected.
+<br> 
+PRESENTATION OF RESULTS<br> 
+As many results are possible in Tissue searches the initial presentation is just of the details of the genes found. At the left of each entry is a toggle button for displaying (or hiding) the table for that gene, and at the top right of the listing is a toggle button that operates on all tables.
+<div style="text-align:center;"><img src="graphics/tissToggle.png" alt=""></div>
+LINKS OUT<br> 
+The icon launches a page with gene links to various Drosophila resources.
+<div style="text-align:center;"><img src="graphics/catLinks.png" alt="">
+</div>
+Gene Ontology ID: links to the AmiGO gene ontology entry. (Holding the cursor over the ID brings up a description of the term in a ‘tool tip’.)
+<div style="text-align:center;"><img src="graphics/gotip.png" alt="">
+</div>
+		</div>
+		
+	<!-- 2.7 Top Search -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt2_7','hs2_7','&#9655;','&#9661;');" title="reveal help"><span id="bt2_7" class="helpTitle onOff">▷</span></a> Top Search</div>
+	<div id="hs2_7" class="conceal helpContent">
+The function of the Top Search is to find which genes show the greatest difference in expression between larval and adult.
+<br>
+SEARCH PARAMETERS<br> 
+The user selects:<br>
+(i) The stage (adult or larval) to have the highest expression<br>
+(ii) The tissue<br>
+(iii) Abundance or enrichment as the criterion of expression<br>
+(iiv) The number of results to be displayed.<br>
+OPTIONS<br> 
+Show standard errors: the default is not to show these.
+<div style="text-align:center;"><img src="graphics/topOptions.png" alt=""></div>
+DUPLICATES AND AMBIGUITY<br>
+There is no option to run Development searches with duplicate or ambiguous hits included. When a gene is detected by more than one probe-set only the results from the best probe-set are shown; if a gene is only detected by an ambiguous probe-set (one that detects other genes) it is excluded from the results.
+<br>
+Where a gene is detected by more than one probe-set the results are flagged with a D. If one wishes to see the duplicates of a particular gene it is necessary transfer to Gene mode and search there.
+<br>
+PRESENTATION OF RESULTS<br> 
+As there are usually many results in Development searches the initial presentation is just of the details of the genes found. At the left of each entry is a toggle button for displaying (or hiding) the table for that gene, and at the top right of the listing is a toggle button that operates on all tables.
+<div style="text-align:center;"><img src="graphics/topToggle.png" alt="">
+</div>
+LINKS OUT<br> 
+he icon launches a page with gene links to various Drosophila resources.
+<div style="text-align:center;"><img src="graphics/geneLinks.png" alt="">
+</div>
+</div>
+
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt2_9','hs2_9','&#9655;','&#9661;');" title="reveal help"><span id="bt2_9" class="helpTitle onOff">▷</span></a> Development Search</div>
+	<div id="hs2_9" class="conceal helpContent">
+The function of the Development Search is to find which genes show the greatest difference in expression between larval and adult.
+<br>
+SEARCH PARAMETERS<br>
+The user selects:<br>
+(i) A stage (adult or larval) followed by a tissue<br>
+(ii) Abundance or enrichment as the criterion of expression<br>
+(iii) The number of results to be displayed.<br>
+
+OPTIONS<br>
+Show standard errors: the default is not to show these.
+<div style="text-align:center;"><img src="graphics/topOptions.png" alt=""></div>
+
+DUPLICATES AND AMBIGUITY<br>
+There is no option to run Top searches with duplicate or ambiguous hits included. When a gene is detected by more than one probe-set only the results from the best probe-set are shown; if a gene is only detected by an ambiguous probe-set (one that detects other genes) it is excluded from the results.
+<br>
+Where a gene is detected by more than one probe-set the results are flagged with a D. If one wishes to see the duplicates of a particular gene it is necessary transfer to Gene mode and search there.
+<br>
+PRESENTATION OF RESULTS<br>
+As there are usually many results in Top searches the initial presentation is just of the details of the genes found. At the left of each entry is a toggle button for displaying (or hiding) the table for that gene, and at the top right of the listing is a toggle button that operates on all tables.
+<div style="text-align:center;"><img src="graphics/devToggle.png" alt=""></div>
+LINKS OUT<br>
+The icon launches a page with gene links to various Drosophila resources.
+<div style="text-align:center;"><img src="graphics/geneLinks.png" alt="">
+</div>
+</div>
+
+</div><!-- end of conceal div -->
+</div>
+<!-- End of 2nd Help section -->
+
+<div class="helpSec"> <!-- 3rd Help section: Results -->
+<div class="helpTitle">
+<a href="javascript:toggleConcealed('bt3','hs3','&#9658;','&#9660;');" title="reveal help"><span id="bt3" class="helpTitle onOff">▶</span></a> Results
+</div>
+	
+<div id="hs3" class="conceal">
+
+	<!-- 3.3 Colour Coding -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt3_3','hs3_3','&#9655;','&#9661;');" title="reveal help"><span id="bt3_3" class="helpTitle onOff">▷</span></a> What the Colours Mean</div>
+	<div id="hs3_3" class="conceal helpContent">To help users quickly identify the results of most interest, the backgrounds of table cells in which numerical data are presented is colour-coded.
+<br>
+For abundance values the white-to-black spectrum illustrated below is used:
+<div style="text-align:center;"><img src="graphics/abundanceSpectrum.png" alt=""></div>
+The scale is log2; i.e. 1=2, 2=4, 3=8 to 15=32,768.
+<br>
+For enrichment values a divergent white/yellow/red spectrum is used:
+<div style="text-align:center;"><img src="graphics/enrichmentSpectrum.png" alt=""></div>
+
+This employs an asymmetric log scale running from white (0) to yellow (1) to represent genes with ‘decreased enrichment’, and then from yellow (1) through orange and a wider range of reds to encompass increases in enrichment.
+</div>
+
+	<!-- 3.2  ] and ND -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt3_2','hs3_2','&#9655;','&#9661;');" title="reveal help"><span id="bt3_2" class="helpTitle onOff">▷</span></a> [ ] and ND values</div>
+	<div id="hs3_2" class="conceal helpContent">
+	Experiments were conducted with four arrays. The Affymetrix GCOS software was used to determine whether the signal was significant in each array, and thus whether there was detectable expression of the gene in a particular tissue. 
+	<div style="text-align:center;"><img src="graphics/symbols.png" alt=""></div>
+Cases where none of the arrays gave significant results are indicated by ‘ND’ (Not Detected). 
+<br>In cases where significant signals were only obtained with between one and three arrays the values are presented in square brackets, [ ], and the number of arrays can be seen by holding the cursor over the value.</div>
+
+	<!-- 3.4 Duplicate hits -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt3_4','hs3_4','&#9655;','&#9661;');" title="reveal help"><span id="bt3_4" class="helpTitle onOff">▷</span></a> Duplicate hits <img src="graphics/D.png" alt="" style="vertical-align:sub;"></div>
+	<div id="hs3_4" class="conceal helpContent">
+We use the term ‘Duplicate’ for the situation where a particular gene hybridizes to more than one microarray probe-set. This arises because some genes span a large region of the genome and have multiple transcripts. However the probe-sets were not intended to be specific for individual exons, but were probably designed before it was realised that the exons were part of a single gene. The fact that different probe-sets can give different signals for the same gene suggests that comparison of the expression of different genes should be made with caution.
+<br>
+By default, only the results from the best probe-set (i.e. the one with significant results giving the highest signal) are displayed. However these results are flagged with a ringed ‘D’, and the user has the option to run searches with all duplicates displayed. 
+<br>
+In certain cases a group of ‘Duplicates’ has only one unambiguous member (see explanation of this term, below), in which case the ‘D’ in the duplicate icon is followed by a red dot. Should the user wish to see the ambiguous duplicates he needs to re-run the search with both the options ‘Include duplicate hits’ and ‘Include ambiguous hits’ selected.	
+	</div>
+
+	<!-- 3.8 Ambiguous hits -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt3_8','hs3_8','&#9655;','&#9661;');" title="reveal help"><span id="bt3_8" class="helpTitle onOff">▷</span></a> Ambiguous hits <img src="graphics/A.png" alt="" style="vertical-align:sub;"></div>
+	<div id="hs3_8" class="conceal helpContent">
+This refers to the situation where a particular probe-set detects more than one gene. This can arise where the genes represent different splice variants of the same genomic regions, but the probes are not specific for the exons that distinguish the genes.
+<br>
+ In such cases it is not possible to interpret the signals unequivocally, and ambiguous probe-sets are normally excluded from the results. However, for those genes which are only detected by an ambiguous probe-set (flagged with a ringed ‘A’) the user is provided with the option of seeing the results.
+ </div>
+
+</div><!-- end of conceal div -->
+</div> <!-- End of Third Help section -->
+
+<!-- 4th Help section: Technical -->
+<div class="helpSec">
+<div class="helpTitle">
+<a href="javascript:toggleConcealed('bt4','hs4','&#9658;','&#9660;');" title="reveal help"><span id="bt4" class="helpTitle onOff">▶</span></a> Insects &amp; Technical
+</div>
+
+<div id="hs4" class="conceal">
+	<!-- 4.1 Insects -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt4_1','hs4_1','&#9655;','&#9661;');" title="reveal help"><span id="bt4_1" class="helpTitle onOff">▷</span></a> Insects</div>
+	<div id="hs4_1" class="conceal helpContent">Insects were wild-type Canton S <em>Drosophila melanogaster</em>, reared at 22˚C on a 12:12 h light regime on standard <em>Drosophila</em> diet. Larvae were third instar, crawling, and adults were one week after  emergence. Equal numbers of male and female 7-day old flies were used (except in the case of gonads) Tissue dissection was as previously described by Chintapalli, V. <em>et al.</em> (2007) <em>Nature Genetics</em>, <strong>39</strong>, 715–720.</div>
+	<!-- 4.6 Tissues -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt4_6','hs4_6','&#9655;','&#9661;');" title="reveal help"><span id="bt4_6" class="helpTitle onOff">▷</span></a> Tissue Details</div>
+	<div id="hs4_6" class="conceal helpContent">
+Adult Head: Severed at the neck. Includes brain, eyes, cuticle and some fat body<br> 
+Adult Eye: Dissected from the brain and the rest of the head capsule, so includes cuticle<br> 
+Adult Brain: Excludes eyes and head capsule<br> 
+Adult Thoracicoabdominal Ganglion: The fused thoracic ganglia that are easily dissected from the ventral surface of the thorax after removing the head<br> 
+Adult Crop: The round diverticulum of the foregut, including the stalk<br> 
+Adult Midgut: From (and including) the proventriculus, down to just in front of the insertion of the Malpighian tubules<br> 
+Adult Hindgut: From the insertion of the tubules, back to and including the rectum<br> 
+Adult Tubule: Both anterior and posterior tubules with their common ureters, severed at the junction with the gut<br> 
+Adult Fat Body: Identifiable fat body from the thorax and abdomen<br> 
+Adult Salivary Gland: The glands lying on the ventral lateral sides of the thorax<br> 
+Adult Heart: The dorsal abdominal heart, necessarily including some adherent tissues (such as fat body)<br> 
+Adult Ovary: Ovaries from mated females, excluding the uterus and spermatheca<br> 
+Adult Virgin Spermatheca: Spermatheca (excluding ovaries and uterus) from 7-day old virgin females kept isolated from males from adult emergence<br> 
+Adult Mated Spermatheca: Spermatheca (excluding ovaries and uterus) from 7-day old females allowed to mate from adult emergence.<br> 
+Adult Testis: Testis excluding the accessory glands<br> 
+Adult Male Accessory Glands: Accessory glands excluding other parts of the male genital tract<br> 
+Adult Carcass: What is left of the thorax and abdomen after the gut and sexual tracts have been removed<br> 
+Larval CNS: The brain and thoracic ganglia<br> 
+Larval Midgut: From (and including) the proventriculus, down to just in front of the insertion of the Malpighian tubules<br> 
+Larval Hindgut: From the insertion of the tubules, back to and including the rectum<br> 
+Larval Tubule: Both anterior and posterior tubules with their common ureters, severed at the junction with the gut<br> 
+Larval Fat Body: Prominent lateral fat bodies<br> 
+Larval Salivary Gland: Salivary glands including ducts<br> 
+Larval Trachea: The major tracheal trunks, excluding spiracles and obvious adherent tissues<br> 
+Larval Carcass: What is left after the other tissues have been removed<br> 
+	</div>
+	<!-- 4.2 RNA workup and hybridization -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt4_2','hs4_2','&#9655;','&#9661;');" title="reveal help"><span id="bt4_2" class="helpTitle onOff">▷</span></a> mRNA &amp; Hybridization</div>
+	<div id="hs4_2" class="conceal helpContent">RNA was isolated from pooled tissues to make at least 1500 ng mRNA. The mRNA was then amplified and hybridized using the Affymetrix standard protocol. For each tissue, four independent biological replicates were obtained. Thus, each array corresponds to one biological replicate.<br> The dataset comprises 44 Affymetrix Dros2 expression arrays, each mapping the expression of 18,770 transcripts — corresponding to the vast majority of known Drosophila genes. The dataset thus contains over 822,800 separate datapoints.	
+	</div>
+	<!-- 4.3 Computational Analysis -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt4_3','hs4_3','&#9655;','&#9661;');" title="reveal help"><span id="bt4_3" class="helpTitle onOff">▷</span></a> Computational</div>
+	<div id="hs4_3" class="conceal helpContent"> The data from the Affimetrix hybridization was used to construct a MySQL database, with full gene information derived from FlyBase (www.flybase.org). The web application was built as a Java Servlet, accessing this database.</div>
+
+</div><!-- end of conceal div -->
+</div>
+<!-- End of 4th Help section -->
+
+<!-- 5th Help section: Citation and Data Availability -->
+<div class="helpSec">
+<div class="helpTitle">
+<a href="javascript:toggleConcealed('bt5','hs5','&#9658;','&#9660;');" title="reveal help"><span id="bt5" class="helpTitle onOff">▶</span></a> Citing &amp; Data Availability
+</div>
+
+<div id="hs5" class="conceal">
+	<!-- 5.1 Citing -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt5_1','hs5_1','&#9655;','&#9661;');" title="reveal help"><span id="bt5_1" class="helpTitle onOff">▷</span></a> Citing FlyAtlas 2013</div>
+	<div id="hs5_1" class="conceal helpContent">
+The work that produced the same underlying data for FlyAtlas and FlyAtlas 2013 was originally published as: <a href="https://www.nature.com/articles/ng2049"> Chintapalli, V. Wang, J and Dow, J (2007) <em>Using FlyAtlas to identify better Drosophila models of human disease</em>, Nature Genetics, 39, 715–720</a>.
+<br>
+A description of this web application, FlyAtlas 2013, was published as: <a href="https://doi.org/10.1093/nar/gks1141">Robinson, S.W., Herzyk, P., Dow, J.A.T. and Leader, D.P. (2013). <em>FlyAtlas: Database of gene expression in the tissues of Drosophila melanogaster.</em> Nucleic Acids Research 41, D744–D750.</a> 
+</div>
+	<!-- 5.2 Authorship -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt5_2','hs5_2','&#9655;','&#9661;');" title="reveal help"><span id="bt5_2" class="helpTitle onOff">▷</span></a> Acknowledgements</div>
+	<div id="hs5_2" class="conceal helpContent">The experimental work that generated the common data for FlyAtlas and FlyAtlas 2013 was performed by Venkat Chintapalli, Jing Wang and Julian Dow of the College of Medical, Veterinary &amp; Life Sciences at the University of Glasgow, UK. The web application, FlyAtlas 2013, is maintained by David P. Leader, also of the University of Glasgow, who conceived and finalized its design. It was developed by Scott Robinson who also conceived and executed the Profile search facility. Pawel Herzyk of the University of Glasgow Polyomics Facility provided valuable advice at various stages. The research was funded by the BBSRC (UK).</div>
+	
+	<!-- 5.3 Data Availability -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt5_3','hs5_3','&#9655;','&#9661;');" title="reveal help"><span id="bt5_3" class="helpTitle onOff">▷</span></a> Data Availability</div>
+	<div id="hs5_3" class="conceal helpContent">• The experimental data for FlyAtlas 2013 is available for <a href="../downloads/20090519all.xlsx">download as a Microsoft Excel spreadsheet</a>.<br>
+	• A dump of the MySQL relational database underlying FlyAtlas 2013 is available for <a href="../downloads/FlyAtlasDB.sql">download</a>.<br>
+	• The FlyAtlas 2013 database server can be queried programmatically, allowing tissue expression data for individual genes to be retrieved in formats suitable for program developers. 
+Documentation (APIs) can be found at https://motif.mvls.gla.ac.uk/flydirect/FlyAtlasAPI.html .<br>
+• You are welcome to link to FlyAtlas 2013 from your own website.</div>
+
+</div><!-- end of conceal div -->
+</div> <!-- End of Fifth Help section -->
+
+<!-- 6th Help section: General Questions -->
+<div class="helpSec">
+<div class="helpTitle">
+<a href="javascript:toggleConcealed('bt6','hs6','&#9658;','&#9660;');" title="reveal help"><span id="bt6" class="helpTitle onOff">▶</span></a> General Points &amp; Queries</div>
+
+<div id="hs6" class="conceal">
+	<!-- 6.1 Gene not in DB -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt6_1','hs6_1','&#9655;','&#9661;');" title="reveal help"><span id="bt6_1" class="helpTitle onOff">▷</span></a> Genes not in Database</div>
+	<div id="hs6_1" class="conceal helpContent">
+If a search for a gene yields no results, first make sure that the appropriate name or identifier has been selected: start typing, and check the autocomplete for related spellings. If this fails it is possible that you are using a designation that is newer than the reference genome used for the database. The RNAseq-based FlyAtlas 2 utilizes a more recent version of the Drosophila genome annotation.
+</div>
+	<!-- 6.2 FA2 v. FA1 -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt6_2','hs6_2','&#9655;','&#9661;');" title="reveal help"><span id="bt6_2" class="helpTitle onOff">▷</span></a> FlyAtlas 2013 v. FlyAtlas 2</div>
+	<div id="hs6_2" class="conceal helpContent">The differentially expressed genes identified in the FlyAtlas 2013 microarray work are generally corroborated by FlyAtlas 2, which uses RNAseq instead. However it would be surprising if there were not some inconsistencies in data for so many genes. It is worth emphasizing some of the limitations of the microarray approach. Thus, although microarray probe-sets were designed to be specific for individual genes, in many cases they turned out not to be so, and the data for over 700 genes are ambiguous and are so marked here. Some genes were detected by more than one probe-set, but with marked differences in signal, suggesting that the probe-sets for some other genes may not have been optimal.</div>
+	
+	<!-- 6.3 Mobile -->
+	<div class="helpSubT"><a href="javascript:toggleConcealed('bt6_3','hs6_3','&#9655;','&#9661;');" title="reveal help"><span id="bt6_3" class="helpTitle onOff">▷</span></a> Mobile Devices</div>
+	<div id="hs6_3" class="conceal helpContent">After ten years we finally revised the FlyAtlas 2013 web application to adapt to the smaller viewing area of mobile devices. To do this it maintains core functionality but dispenses with some secondary features. For example, the ‘link-out’ options and the Profile Search bar charts may not be available, depending on the size of the device. Selecting ‘Request Desktop Site’ from the options in your mobile web browser may — depending on your device — give you access to these features.
+	</div>
+
+	<!-- 6.4 etc. -->	
+		<div class="helpSubT"><a href="javascript:toggleConcealed('bt6_4','hs6_4','&#9655;','&#9661;');" title="reveal help"><span id="bt6_4" class="helpTitle onOff">▷</span></a> Other Questions</div>
+	<div id="hs6_4" class="conceal helpContent">If you have a question or a problem that is not covered here, let us know using the feedback form.</div>
+
+</div><!-- end of conceal div -->
+</div> <!-- End of Sixth Help section -->

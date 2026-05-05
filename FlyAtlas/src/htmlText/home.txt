@@ -1,0 +1,43 @@
+<div id="insert" class="mobileHide"> 	<!-- Start of insert div -->
+<p class="noindent">
+<span class="firstWord">FlyAtlas 2013</span> (flyatlas2013.org) allows users to explore the way that different genes are expressed in the tissues of <em>Drosophila melanogaster</em>. It is based on hybridizing tissue mRNA to microarrays representing the <em>Drosophila</em> genome — work performed in the Dow/Davies laboratory in the University of Glasgow. It presents a different interface from that on the original <a href="http://flyatlas.org/">FlyAtlas</a> site, which is still available.
+</p>
+
+<h3>SEARCH TYPES</h3>
+<p class="noindent"><strong>Gene:</strong> For a particular gene, find details of its expression in different tissues.</p>
+
+<p class="noindent"><strong>Category:</strong> For a group of genes with related functions, find details of their expression in different tissues.</p>
+
+<p class="noindent"><strong>Profile:</strong> For a particular gene, find others with a similar pattern of expression in different tissues.</p>
+
+<p class="noindent"><strong>Tissue:</strong> For a given tissue, find the genes of a particular category with the greatest expression.</p>
+
+<p class="noindent"><strong>Top:</strong> For a given tissue, find the genes that are most highly expressed there (e.g. ‘top 20’).</p>
+
+<p class="noindent"><strong>Development:</strong> For a given tissue, find genes that change in expression between larva and adult.</p>
+
+<h3>INTERPRETING RESULTS</h3> 
+<p class="noindent">One feature of FlyAtlas 2013 is that it addresses a particular limitation of microarrays: 
+the fact that some probe-sets are ‘ambiguous’ — they detect more than one gene. In addition, certain genes are 
+detected by more than one probe-set — so-called ‘duplicates’. These are indicated by circled letters ‘A’ or ‘D’ 
+(with explanatory tool tips) in the results, but for more extensive explanation the user is directed to the ‘Docs’ .</p>
+
+<h3>AUTHORSHIP</h3>
+<p class="noindent">The experimental work underlying this web application was originally described in a <a href="http://www.nature.com/ng/journal/v39/n6/abs/ng2049.html">paper</a> by Venkat Chintapalli, Jing Wang and Julian Dow in Nature Genetics .</p>
+<p class="noindent">The web application itself was built by Scott W. Robinson and David P. Leader, and is described in a <a href="https://doi.org/10.1093/nar/gks1141">paper</a> in the Database issue of Nucleic Acids Research for 2013.</p>
+
+<h3>FLY ATLAS 2</h3> 
+<p class="noindent">
+Gene information in FlyAtlas 2013 includes a link to <a href="http://flyatlas2.org/">FlyAtlas 2</a>. 
+That is our later site presenting data based on RNA-Seq, rather than microarrays, with separate determinations for male and female flies. 
+(Not all genes are represented in both data sets.)</p>
+
+
+<div style="float: right; padding-top: 10px;">
+<img class="shrinkfit2" src="images/BBSRClogo.gif" alt="" title="Funded by the BBSRC">
+</div>
+<div style="padding-top: 10px;">
+<a href="http://www.gla.ac.uk/"><img class="shrinkfit1" src="images/UofGss.jpg" alt="" title="University of Glasgow"></a>
+</div>
+
+</div> <!-- End of insert div-->

@@ -1,0 +1,18 @@
+Head
+Eye
+Brain/CNS
+Thoracicoabdominal ganglion
+Crop
+Midgut
+Hindgut
+Tubule
+Fat body
+Salivary gland
+Heart
+Trachea
+Ovary
+Virgin Spermatheca
+Mated Spermatheca
+Testis
+Accessory glands
+Carcass
