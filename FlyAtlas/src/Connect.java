@@ -10,8 +10,8 @@ import java.sql.*;
 public class Connect
 {
 	Connection conn = null;
-	String username = "charles";
-	String password = "atlas";
+	String username = "xxxxxx";
+	String password = "xxxxxx";
 	String host = "jdbc:mysql://localhost/FlyAtlasDB";
 
 	ResultSet resSet;
